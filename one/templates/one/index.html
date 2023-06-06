@@ -1,0 +1,18 @@
+{%extends 'one/layout.html'%}
+
+{%block body%}
+<h1>Index</h1>
+{%for flights in  flight%}
+
+   <ul>
+
+    <li><a href="{% url 'flight' flights.id%}">{{flights.origin}} To  {{flights.destination}} {{flights.duration}}</a></li>
+
+</ul>
+
+
+
+
+{%endfor%}
+
+{%endblock%}
