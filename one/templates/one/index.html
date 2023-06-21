@@ -1,7 +1,10 @@
 {%extends 'one/layout.html'%}
 
 {%block body%}
-<h1>Index</h1>
+<h1>Hello {{request.user.username}}</h1>
+<h4><a href="{%url 'logout'%}">Logout</h4>
+
+
 {%for flights in  flight%}
 
    <ul>

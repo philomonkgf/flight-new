@@ -1,0 +1,23 @@
+{%extends 'one/layout.html'%}
+{% block body%}
+<h1> User Login  </h1>
+<form method="post">
+    {%csrf_token%}
+    <label>
+        Email:-
+        <input type="email" placeholder="Email" name="email">
+    </label><br><br>
+   <label> Password
+    <input type="password" placeholder="password" name="password">
+</label><br><br>
+<input type="submit">
+
+</form>
+{%if message %}
+{{message}}
+
+{%endif%}
+
+
+
+{%endblock%}
